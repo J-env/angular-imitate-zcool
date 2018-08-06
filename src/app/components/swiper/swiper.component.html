@@ -1,0 +1,18 @@
+<div class="swiper-c slider-horizontal">
+  <div class="swiper-items">
+    <a *ngFor="let item of data;let i = index" 
+      [@swiper]="swiperSrv.swiperState(i)"
+      class="swiper-item" href="javascript:;">
+      <img src="{{item}}" alt="">
+    </a>
+  </div>
+</div>
+
+<div *ngIf="type === 1" class="pages">
+  <a (click)="swiperSrv.next()" href="javascript:;" class="unslider-arrow next">
+    <i class="material-icons">arrow_forward_ios</i>
+  </a>
+  <a (click)="swiperSrv.prev()" href="javascript:;" class="unslider-arrow prev">
+    <i class="material-icons">arrow_back_ios</i>
+  </a>
+</div>

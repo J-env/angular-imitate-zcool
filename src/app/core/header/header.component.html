@@ -1,0 +1,81 @@
+<nav>
+  <a class="logo" routerLink="/">
+    <img class="logo-pic" src="../../../assets/images/logo.svg" alt="logo">
+  </a>
+
+  <div class="menu">
+    <app-search 
+      *ngIf="showCoo" 
+      (panelClose)="panelClose($event)" 
+      (search)="onSearch($event)" 
+      [folders]="folders" class="search-box"></app-search>
+
+    <div [class.hide]="showCoo" class="list-wrapper">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a routerLink="home" routerLinkActive="actived">首页</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">发现</a>
+          <div class="menu-wrapper discover-box">
+            <div class="labels">
+              <a href="javascript:;">平面</a>
+              <a href="javascript:;">UI</a>
+              <a href="javascript:;">网页</a>
+              <a href="javascript:;">插画</a>
+              <a href="javascript:;">动漫</a>
+              <a href="javascript:;">摄影</a>
+              <a href="javascript:;">空间</a>
+              <a href="javascript:;">工业/产品</a>
+              <a href="javascript:;">三维</a>
+              <a href="javascript:;">影视</a>
+              <a href="javascript:;">手工艺</a>
+              <a href="javascript:;">纯艺术</a>
+              <a href="javascript:;">服装</a>
+              <a href="javascript:;">其他</a>
+            </div>
+            <div class="selection-bt">
+              <a href="javascript:;">精选作品<i class="material-icons">keyboard_arrow_right</i></a>
+              <a href="javascript:;">精选文章<i class="material-icons">keyboard_arrow_right</i></a>
+              <a href="javascript:;">精选收藏<i class="material-icons">keyboard_arrow_right</i></a>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">同城</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">职位</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">活动</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">正版素材</a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="xxx" routerLinkActive="actived">课程</a>
+        </li>
+        <li class="menu-item">
+          <span class="more-horiz"><i class="material-icons">more_horiz</i></span>
+          <app-menu class="menu-wrapper"></app-menu>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <a *ngIf="!showCoo" (click)="showSearch()" class="search search-perch" href="javascript:;">
+    <i class="material-icons">search</i>
+  </a>
+
+  <div class="user-game">
+    <a class="cloud-upload" href="javascript:;">
+      <i class="material-icons outline-cloud_upload">cloud_upload</i>
+    </a>
+
+    <div class="not-login pull-right">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: $min-width;
+  height: 229px;
+  background: $black;
+  color: #666;
+}

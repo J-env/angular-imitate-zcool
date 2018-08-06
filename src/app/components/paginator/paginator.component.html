@@ -1,0 +1,7 @@
+<div class="pages">
+  <a *ngIf="showPrev" (click)="previous()" class="prev">&lt;</a>
+  <ng-container *ngFor="let item of pageSize;let i = index">
+    <a *ngIf="i < 7 || i >= 98" [class.current]="current === i + 1" (click)="active(i)">{{i + 1}}</a>
+  </ng-container>
+  <a *ngIf="showNext" (click)="next()" class="next">&gt;</a>
+</div>

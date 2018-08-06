@@ -1,0 +1,19 @@
+<form *ngIf="folders?.length" novalidate>
+  <mat-form-field class="full-width">
+    <i class="material-icons search-ico">search</i>
+    <input #searchInput matInput (keyup.enter)="search.emit($event)" name="search" autocomplete="off" type="text">
+    <i class="material-icons close-ico">close</i>
+  </mat-form-field>
+
+  <div class="panel-overlay">
+    <mat-list>
+      <ng-template ngFor let-folder [ngForOf]="folders">
+        <h3 mat-subheader>{{ folder?.title }}</h3>
+
+        <mat-list-item *ngFor="let item of folder?.items">
+          <a mat-line href="javascript:;">{{ item }}</a>
+        </mat-list-item>
+      </ng-template>
+    </mat-list>
+  </div>
+</form>

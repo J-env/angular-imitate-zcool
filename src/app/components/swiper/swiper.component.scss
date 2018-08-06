@@ -1,0 +1,86 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  &:hover {
+    .pages {
+      display: block;
+    }
+  }
+
+  .pages {
+    bottom: auto;
+    top: 50%;
+    height: 0;
+  }
+}
+
+:host,
+.swiper-c {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+:host,
+.swiper-c,
+.swiper-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+:host ::ng-deep .pages {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-items ::ng-deep {
+  .swiper-item {
+    float: left;
+    text-align: center;
+  }
+
+  .swiper-item {
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  img,
+  .swiper-item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.unslider-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  margin-top: -26px;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,.2);
+  border-radius: 100%;
+
+  &.next {
+    right: 15px;
+  }
+  &.prev {
+    left: 15px;
+  }
+
+  .material-icons {
+    line-height: 50px;
+    margin-right: -5px;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}

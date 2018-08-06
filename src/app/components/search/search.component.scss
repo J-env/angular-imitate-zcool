@@ -1,0 +1,78 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  display: block;
+
+  ::ng-deep {
+    .mat-form-field-infix {
+      border: 0;
+      padding: 0;
+      height: $header-height;
+      line-height: $header-height;
+    }
+  }
+}
+
+form {
+  display: inline-block;
+  position: relative;
+  width: 540px;
+
+  input {
+    margin-left: 40px;
+    width: 460px;
+    background: transparent !important;
+  }
+}
+
+.mat-form-field {
+  height: $header-height;
+
+  .material-icons {
+    position: absolute;
+    font-size: 28px;
+    line-height: 56px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .search-ico {
+    right: 0;
+  }
+
+  .close-ico {
+    left: 0;
+  }
+}
+
+.panel-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: left;
+  color: #444;
+  background: #fff;
+  box-shadow: 0 1px 12px 0 rgba(0,0,0,.2);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+
+  .mat-list-item,
+  .mat-subheader {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .mat-list-item {
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+
+  
+  .mat-subheader {
+    font-size: 12px;
+    color: #bbb;
+  }
+}

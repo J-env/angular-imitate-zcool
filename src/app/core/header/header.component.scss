@@ -1,0 +1,226 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  height: $header-height;
+  min-width: $min-width;
+  background: $theme-color;
+}
+
+nav {
+  position: relative;
+  margin: 0 70px;
+  height: $header-height;
+
+  @media screen and (max-width: 1250px) {
+    width: 1122px;
+  }
+
+  .material-icons {
+    font-size: 28px;
+    line-height: $header-height;
+  }
+}
+
+// Logo
+.logo {
+  position: absolute;
+  top: 18px;
+  left: 0;
+}
+
+.logo-pic {
+  width: 120px;
+  height: 20px;
+}
+
+// Menu
+.menu,
+.list-wrapper,
+.search,
+.user-game,
+.cloud-upload {
+  height: 100%;
+}
+
+.list-wrapper {
+  text-align: center;
+}
+
+.menu-list {
+  display: inline-block;
+  height: $header-height;
+  user-select: none;
+}
+
+.menu-item {
+  position: relative;
+  float: left;
+  height: $header-height;
+  line-height: $header-height;
+  text-align: left;
+  cursor: pointer;
+  
+  & > a {
+    display: inline-block;
+    padding: 0 24px;
+
+    &.actived {
+      font-weight: 600;
+    }
+  }
+
+  &:hover {
+    background: $black;
+    color: $theme-color;
+    .menu-wrapper {
+      display: block;
+    }
+  }
+
+  .more-horiz {
+    display: inline-block;
+    padding: 0 20px;
+    width: 68px;
+    height: 100%;
+  }
+}
+
+.search-box {
+  text-align: center;
+  width: 100%;
+}
+
+
+// Search
+.search {
+  position: absolute;
+  top: 0;
+  right: 192px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+// User
+.user-game {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 192px;
+
+  .cloud-upload {
+    position: relative;
+    float: left;
+    width: 64px;
+    text-align: center;
+  }
+}
+
+.not-login {
+  a {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    height: $header-height;
+    line-height: $header-height;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    & + a {
+      margin-left: 20px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        margin-top: -5px;
+        height: 10px;
+        width: 1px;
+        background: #444;
+      }
+    }
+  }
+}
+
+.menu-wrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 56px;
+  z-index: 14;
+  width: 152px;
+  color: #444;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 12px 0 rgba(0,0,0,.2);
+}
+
+.discover-box {
+  width: 664px;
+  padding: 0;
+  background: #fff;
+
+  .labels {
+    padding: 11px 17px 17px;
+    line-height: 0;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+  }
+
+  .selection-bt {
+    padding: 0 30px;
+    line-height: 51px;
+  }
+}
+
+.selection-bt a {
+  position: relative;
+  margin-right: 40px;
+  padding-right: 15px;
+  color: #444;
+
+  .material-icons {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    line-height: 1;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    color: #d36f16;
+  }
+}
+
+.labels a {
+  float: left;
+  padding: 0 7px;
+  margin: 0 6px;
+  margin-top: 4px;
+  width: 78px;
+  height: 28px;
+  min-width: 42px;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+  border-radius: 4px;
+
+  &:not(:nth-child(7n)):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    margin-top: -7px;
+    width: 1px;
+    height: 14px;
+    background: #ddd;
+  }
+
+  &:hover {
+    background-clip: content-box;
+    background: $theme-color;
+  }
+}

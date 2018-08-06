@@ -1,0 +1,29 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  display: block;
+  background: transparent;
+}
+
+.menu-list {
+  position: relative;
+  padding: 6px 0;
+  width: 100%;
+  background: #fff;
+}
+
+dd {
+  height: 44px;
+  line-height: 44px;
+  cursor: pointer;
+  text-align: left;
+  
+  a {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    &:hover {
+      background: $theme-color;
+    }
+  }
+}

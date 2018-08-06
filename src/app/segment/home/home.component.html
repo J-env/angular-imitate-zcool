@@ -1,0 +1,110 @@
+<section class="swiper-ad-wrap">
+  <div class="layout-c">
+    <div class="slider">
+      <app-swiper [data]="swiperData"></app-swiper>
+    </div>
+
+    <mat-grid-list cols="5" gutterSize="20px" rowHeight="208px" class="adv-rows">
+      <mat-grid-tile>
+        <a href="javascript:;">
+          <img src="../../../assets/images/adv80142.jpg" alt="">
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a href="javascript:;">
+          <img src="../../../assets/images/adv2115c.jpg" alt="">
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a href="javascript:;">
+          <img src="../../../assets/images/adv0e90.jpg" alt="">
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a href="javascript:;">
+          <img src="../../../assets/images/adv4ee.jpg" alt="">
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a href="javascript:;">
+          <img src="../../../assets/images/adv68cc0.jpg" alt="">
+        </a>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</section>
+
+<div class="subnav-box">
+  <div #subnavTab class="subnav-tab" [class.fixed-top]="fixed">
+
+    <div class="layout-c">
+      <ul class="subnav-container">
+        <li>
+          <a class="actived" href="javascript:;">首页推荐</a>
+        </li>
+        <li class="">
+          <a href="javascript:;">最新发布</a>
+        </li>
+        <li class="">
+          <a href="javascript:;">上升最快</a>
+        </li>
+      </ul>
+
+      <a [ngClass]="{hide: fixed}" class="event-cube" href="javascript:;" target="_blank">
+        <img src="../../../assets/images/event_cube.gif" width="150" alt="">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<section class="layout-c fiche-list">
+  <mat-grid-list cols="5" gutterSize="20px" rowHeight="345px">
+    <mat-grid-tile>
+      <app-figure></app-figure>
+      <app-author-card></app-author-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure></app-figure>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <app-pagination class="pagination" [pageSize]="100" [current]="1"></app-pagination>
+</section>
+
+<div class="ad-long">
+  <div class="layout-c">
+    <a href="javascript:;">
+      <img src="../../../assets/images/adlong5.jpg" alt="">
+    </a>
+  </div>
+</div>
+
+<section class="layout-c related-power">
+  <mat-grid-list cols="5" gutterSize="20px" rowHeight="240px">
+    <mat-grid-tile>
+      <app-figure [type]="2"></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure [type]="2"></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure [type]="2"></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure [type]="2"></app-figure>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-figure [type]="2"></app-figure>
+    </mat-grid-tile>
+  </mat-grid-list>
+</section>

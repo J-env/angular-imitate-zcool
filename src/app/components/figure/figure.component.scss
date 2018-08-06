@@ -1,0 +1,148 @@
+:host {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.list-pic, 
+  .list-pic img {
+    display: block;
+    width: 100%;
+    height: 195px;
+  }
+
+  .list-pic img {
+    border-radius: 4px 4px 0 0;
+    transition: .1s linear;
+    &:hover {
+      opacity: .8;
+      transition: all .1s linear;
+    }
+  }
+
+.list-info {
+  position: relative;
+  padding: 11px 16px 13px;
+  height: 100px;
+  border-bottom: 1px solid #eee;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 1px;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  a {
+    width: 228px;
+    float: left;
+  }
+}
+
+.title-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  &:hover {
+    color: #d36f16;
+  }
+}
+
+.type {
+  margin-bottom: 17px;
+  height: 18px;
+}
+
+.type2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  a {
+    max-width: 200px;
+  }
+
+  .fire {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    background-position: center;
+    display: inline-block;
+
+    &.fire-1 {
+      background-image: url(../../../assets/images/putongtuijian.svg);
+    }
+  }
+}
+
+.span,
+.type {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.span {
+  position: absolute;
+  bottom: 14px;
+
+  span {
+    margin-right: 10px;
+    cursor: default;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: top;
+      margin-right: 5px;
+    }
+  }
+}
+
+.view:before {
+  background: url(../../../assets/images/card-liulan.svg) no-repeat;
+  background-size: 16px 16px;
+}
+.comment:before {
+  background: url(../../../assets/images/card-pinglun.svg) no-repeat;
+  background-size: 16px 16px;
+}
+.tuijian:before {
+  background: url(../../../assets/images/card-zan.svg) no-repeat;
+  background-size: 16px 16px;
+}
+
+.list-item {
+  position: relative;
+  padding: 0 16px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+
+  .pull-left {
+    a {
+      display: block;
+      color: #333;
+
+      &:hover {
+        color: #d36f16;
+      }
+    }
+
+    img {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+  }
+
+  .time {
+    color: #bbb;
+  }
+}

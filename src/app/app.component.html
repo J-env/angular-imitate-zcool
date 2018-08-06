@@ -1,0 +1,7 @@
+<header app-header *ngIf="pageService.exist"></header>
+
+<div class="mian-content">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer *ngIf="pageService.exist"></app-footer>

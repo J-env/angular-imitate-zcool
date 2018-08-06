@@ -1,0 +1,119 @@
+@import "../../../assets/scss/normalize/variables.scss";
+
+:host {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 49px;
+  z-index: 11;
+  padding: 30px 0 21px;
+  height: 280px;
+  width: 210px;
+  background: #fff;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 2px 6px 15px rgba(0,0,0,.15);
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -10px;
+    left: 19px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #fff #fff;
+    transform-origin: 0 0;
+    transform: rotate(-46deg);
+    box-shadow: -3px 2px 2px rgba(255,255,255,.05);
+  }
+
+  a:hover {
+    color: $hover !important;
+  }
+}
+
+.avatar,
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.title {
+  margin: 4px 0 0;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  vertical-align: middle;
+  color: #333;
+}
+
+.sub-title {
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+.info {
+  line-height: 21px;
+
+  .pull-left {
+    position: relative;
+    width: 50%;
+    text-align: center;
+  }
+
+  p {
+    color: #bbb;
+    font-size: 12px;
+  }
+
+  a {
+    color: #333;
+    font-weight: 600;
+  }
+
+  .work:after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 30px;
+    background: #ddd;
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+}
+
+.btn-wrap {
+  padding: 0 20px;
+  margin-top: 14px;
+
+  .mat-flat-button,
+  .mat-stroked-button {
+    width: 80px;
+    min-width: 80px;
+    height: 32px;
+    line-height: 32px;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .mat-stroked-button {
+    color: #666;
+
+    ::ng-deep .mat-button-focus-overlay {
+      display: none;
+    }
+  }
+  
+  .mat-flat-button {
+    color: #444;
+    background: #ffd100;
+    border-radius: 4px;
+  }
+}
