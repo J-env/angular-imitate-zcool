@@ -1,7 +1,35 @@
+<ng-template #renderTemplate let-type let-page="page">
+  <ng-container *ngIf="type === 'prev'">&lt;</ng-container>
+  <span *ngIf="type === 'page'">{{ page }}</span>
+  <span *ngIf="type === 'next'">&gt;</span>
+</ng-template>
+
 <div class="pages">
-  <a *ngIf="showPrev" (click)="previous()" class="prev">&lt;</a>
-  <ng-container *ngFor="let item of pageSize;let i = index">
-    <a *ngIf="i < 7 || i >= 98" [class.current]="current === i + 1" (click)="active(i)">{{i + 1}}</a>
-  </ng-container>
-  <a *ngIf="showNext" (click)="next()" class="next">&gt;</a>
+  <!-- prev -->
+  <a *ngIf="!isFirst" (click)="prev()" class="prev" title="上一页">
+    <ng-container *ngTemplateOutlet="renderTempl; context: { $implicit: 'prev' }"></ng-container>
+  </a>
+  <!-- first -->
+  <a [class.current]="isFirst" (click)="pageClick(1)">
+    <ng-template [ngTemplateOutlet]="renderTempl" [ngTemplateOutletContext]="{ $implicit: 'page', page: 1 }"></ng-template>
+  </a>
+  <!-- prev... -->
+  <span *ngIf="showPrevDots" class="prev-dots"></span>
+  
+  <a *ngFor="let page of pageArray" 
+    [class.current]="pageIndex === page.index" 
+    (click)="pageClick(page.index)">
+    <ng-template [ngTemplateOutlet]="renderTempl" [ngTemplateOutletContext]="{ $implicit: 'page', page: page.index }"></ng-template>
+  </a>
+  
+  <!-- next... -->
+  <span *ngIf="showNextDots" class="next-dots"></span>
+  <!-- count -->
+  <a [class.current]="isLast" (click)="pageClick(pageCount)">
+    <ng-container *ngTemplateOutlet="renderTempl; context: { $implicit: 'page', page: pageCount }"></ng-container>
+  </a>
+  <!-- next -->
+  <a *ngIf="!isLast" (click)="next()" class="next" title="下一页">
+    <ng-template [ngTemplateOutlet]="renderTempl" [ngTemplateOutletContext]="{ $implicit: 'next' }"></ng-template>
+  </a>
 </div>

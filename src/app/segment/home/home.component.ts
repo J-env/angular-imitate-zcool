@@ -13,6 +13,7 @@ const basePath = '../../../assets/images/';
 export class HomeComponent implements AfterViewInit, OnDestroy {
   private docScrollSubscription: Subscription;
   fixed = false;
+  pageIndex = 2;
 
   swiperData = [
     `${basePath}dd01d2.jpg`,
